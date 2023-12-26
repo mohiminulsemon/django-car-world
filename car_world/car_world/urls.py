@@ -28,3 +28,5 @@ urlpatterns = [
     path('cars/', include('cars.urls')),
     # path('brands/', include('brands.urls')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

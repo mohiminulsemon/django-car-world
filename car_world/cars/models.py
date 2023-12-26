@@ -8,7 +8,7 @@ class Car(models.Model):
     brand = models.ForeignKey(Brands, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='cars/uploads')
+    image = models.ImageField(upload_to='cars/media/uploads', blank=True, null=True)
     price = models.FloatField()
     quantity = models.PositiveIntegerField(default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
